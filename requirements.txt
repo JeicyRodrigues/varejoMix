@@ -1,0 +1,13 @@
+pandas>=2.2,<3
+SQLAlchemy>=2.0,<3
+psycopg[binary]>=3.2,<4
+pymongo>=4.8,<5
+jsonschema>=4.20,<5
+pyarrow>=17,<25
+deltalake>=1.0,<2
+duckdb>=1.1,<2
+pytest>=8,<9
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6.29,<7
+jupyterlab>=4,<5

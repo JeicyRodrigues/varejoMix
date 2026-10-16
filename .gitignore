@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.py[cod]
+data/*.sqlite
+
+# Saídas temporárias do planejador e revisão de documentos
+.typst-build-plan.json
+.typst-content-manifest.json
+relatorio/.typst-document.json
+relatorio/preflight.*
+relatorio/review/
+*.typst-diagnostics.log

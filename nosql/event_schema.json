@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://varejomix.local/schemas/event_schema.json",
+  "title": "VarejoMix behavioral event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "session_id", "occurred_at", "channel", "event_type", "properties"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "customer_id": {"type": ["integer", "null"], "minimum": 1},
+    "session_id": {"type": "string", "minLength": 1},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "channel": {"type": "string", "enum": ["ecommerce", "loja"]},
+    "event_type": {"type": "string", "enum": ["page_view", "search", "add_to_cart", "checkout_start", "purchase"]},
+    "properties": {
+      "type": "object",
+      "properties": {
+        "page": {"type": "string"},
+        "search_term": {"type": "string"},
+        "product_id": {"type": ["integer", "null"], "minimum": 1},
+        "cart_item_count": {"type": "integer", "minimum": 0},
+        "order_id": {"type": ["integer", "null"], "minimum": 1},
+        "value": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "source": {"type": "string"}
+  }
+}

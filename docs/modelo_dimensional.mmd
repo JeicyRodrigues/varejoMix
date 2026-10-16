@@ -1,0 +1,16 @@
+erDiagram
+  DIM_CUSTOMER ||--o{ FACT_SALES : customer_key
+  DIM_PRODUCT ||--o{ FACT_SALES : product_key
+  DIM_DATE ||--o{ FACT_SALES : date_key
+  DIM_STORE ||--o{ FACT_SALES : store_key
+  DIM_CHANNEL ||--o{ FACT_SALES : channel_key
+  DIM_CUSTOMER ||--o{ FACT_SESSION_EVENTS : optional_customer_key
+  DIM_DATE ||--o{ FACT_SESSION_EVENTS : date_key
+  DIM_CHANNEL ||--o{ FACT_SESSION_EVENTS : channel_key
+  DIM_CUSTOMER { bigint customer_key PK integer customer_id UK text city }
+  DIM_PRODUCT { bigint product_key PK integer product_id UK text product_name text category_name decimal unit_cost }
+  DIM_DATE { integer date_key PK date calendar_date text year_month }
+  DIM_STORE { bigint store_key PK integer store_id UK text store_name text store_type }
+  DIM_CHANNEL { smallint channel_key PK text channel_name UK }
+  FACT_SALES { bigint sale_key PK integer order_item_id UK integer order_id integer quantity decimal gross_amount decimal net_amount decimal estimated_cost decimal margin_amount }
+  FACT_SESSION_EVENTS { text event_id PK text session_id timestamp occurred_at text event_type json properties }

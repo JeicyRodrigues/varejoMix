@@ -1,0 +1,4 @@
+store_id,store_name,city,store_type
+1,Centro,São Paulo,physical
+2,Shopping Norte,São Paulo,physical
+3,Loja virtual,Online,ecommerce

@@ -1,0 +1,11 @@
+customer_id,full_name,email,city,created_at
+1,Ana Lima,ana.lima@example.test,São Paulo,2024-11-10
+2,Bruno Costa,bruno.costa@example.test,Campinas,2024-11-12
+3,Carla Souza,carla.souza@example.test,São Paulo,2024-11-15
+4,Diego Alves,diego.alves@example.test,Santos,2024-11-20
+5,Elisa Rocha,elisa.rocha@example.test,Campinas,2024-12-01
+6,Fabio Reis,fabio.reis@example.test,São Paulo,2024-12-06
+7,Gabi Melo,gabi.melo@example.test,Santos,2024-12-15
+8,Heitor Nunes,heitor.nunes@example.test,Campinas,2024-12-20
+9,Iris Prado,iris.prado@example.test,São Paulo,2025-01-02
+10,João Pires,joao.pires@example.test,Santos,2025-01-05

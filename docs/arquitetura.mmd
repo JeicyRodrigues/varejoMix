@@ -1,0 +1,18 @@
+flowchart LR
+ subgraph S[Fontes]
+   P[(PostgreSQL\nOLTP)]
+   M[(MongoDB\nEventos)]
+   F[Fixtures\nCSV / JSON]
+ end
+ E[Python\nSQLAlchemy + pandas] --> B[Bronze\nSnapshots brutos]
+ P --> E
+ M --> E
+ F --> E
+ B --> V[Silver\nTipos, dedupe, validação]
+ V --> G[Gold\nEstrela + Parquet]
+ V --> D[Delta Lake\nHistórico e snapshots]
+ G --> U[DuckDB\nConsultas locais]
+ D --> T[Time travel\nVersão anterior]
+ G --> C[Features de cliente\nParquet]
+ U --> A[Relatórios e análises]
+ C --> A

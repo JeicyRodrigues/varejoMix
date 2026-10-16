@@ -1,0 +1,7 @@
+product_id,sku,product_name,category_id,unit_price,unit_cost
+1,VM-1001,Notebook Essencial,1,899.99,660.0
+2,VM-1002,Fone Bluetooth,1,79.9,38.0
+3,VM-2001,Cafeteira Compacta,2,129.0,70.0
+4,VM-2002,Café Especial 500g,2,22.5,12.0
+5,VM-3001,Livro Dados no Varejo,3,45.0,20.0
+6,VM-3002,Mochila Urbana,3,159.0,75.0

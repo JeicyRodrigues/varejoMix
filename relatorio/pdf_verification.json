@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "pdf": "/home/ubuntu/VarejoMix/relatorio/main.pdf",
+  "profile": "text-document",
+  "overall": "PASS",
+  "checks": [
+    {
+      "name": "signature",
+      "status": "PASS",
+      "message": "PDF header is valid",
+      "evidence": {
+        "header": "%PDF-"
+      }
+    },
+    {
+      "name": "pdfinfo",
+      "status": "PASS",
+      "message": "PDF is parseable by pdfinfo",
+      "evidence": {}
+    },
+    {
+      "name": "page-count",
+      "status": "PASS",
+      "message": "pages=7",
+      "evidence": {
+        "pages": 7
+      }
+    },
+    {
+      "name": "metadata-title",
+      "status": "PASS",
+      "message": "expected='Arquitetura de Dados Híbrida para Varejo Omnichannel', actual='Arquitetura de Dados Híbrida para Varejo Omnichannel'",
+      "evidence": {}
+    },
+    {
+      "name": "metadata-author",
+      "status": "PASS",
+      "message": "expected='Projeto acadêmico VarejoMix', actual='Projeto acadêmico VarejoMix'",
+      "evidence": {}
+    },
+    {
+      "name": "text-presence",
+      "status": "PASS",
+      "message": "characters=17151",
+      "evidence": {}
+    },
+    {
+      "name": "placeholders",
+      "status": "PASS",
+      "message": "No placeholder markers found",
+      "evidence": {
+        "matches": []
+      }
+    },
+    {
+      "name": "fonts",
+      "status": "PASS",
+      "message": "font_records=6",
+      "evidence": {}
+    }
+  ]
+}

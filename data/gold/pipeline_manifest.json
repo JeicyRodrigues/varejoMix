@@ -1,0 +1,24 @@
+{
+  "run_id": "4e7213c6c8c0de40",
+  "source": "synthetic_fixture",
+  "processed_at_utc": "2026-10-16T00:30:35.114967+00:00",
+  "counts": {
+    "customers": 10,
+    "orders": 18,
+    "order_items": 22,
+    "events": 29,
+    "fact_sales": 21,
+    "rejected_records": 0
+  },
+  "delta": {
+    "path": "data/gold/fact_sales_delta",
+    "previous_version_before_run": 0,
+    "version_after_run": 1,
+    "previous_rows_read": 21,
+    "previous_version_read_ok": true
+  },
+  "gross_revenue": 4671.47,
+  "net_revenue": 4402.47,
+  "estimated_margin": 1482.47,
+  "idempotency": "Gold fact is fully overwritten from deduplicated stable natural keys; repeated snapshot contains one row per order_item_id."
+}

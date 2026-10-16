@@ -1,0 +1,21 @@
+{
+  "path": "data/gold/customer_features.parquet",
+  "rows": 10,
+  "columns": 12,
+  "nulls": {
+    "customer_id": 0,
+    "reference_date": 0,
+    "last_purchase_date": 1,
+    "recency_days": 1,
+    "purchase_frequency": 0,
+    "monetary_total": 0,
+    "average_ticket": 1,
+    "total_items": 0,
+    "predominant_channel": 1,
+    "days_since_first_purchase": 1,
+    "event_count": 0,
+    "session_count": 0
+  },
+  "reference_date": "2025-04-01",
+  "trained_model": false
+}

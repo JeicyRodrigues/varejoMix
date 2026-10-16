@@ -1,0 +1,69 @@
+VarejoMix — EXPLAIN ANALYZE real no PostgreSQL 16
+psql:sql/04_indexes.sql:2: NOTICE:  relation "idx_orders_ordered_at" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:3: NOTICE:  relation "idx_orders_customer_date" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:4: NOTICE:  relation "idx_orders_channel_date" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:5: NOTICE:  relation "idx_order_items_product" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:6: NOTICE:  relation "idx_inventory_store_product_time" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:7: NOTICE:  relation "idx_payments_status" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:8: NOTICE:  relation "idx_fact_sales_date_channel" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:9: NOTICE:  relation "idx_fact_sales_customer_date" already exists, skipping
+CREATE INDEX
+psql:sql/04_indexes.sql:10: NOTICE:  relation "idx_fact_sales_product_date" already exists, skipping
+CREATE INDEX
+ANALYZE
+ANALYZE
+ANALYZE
+ANALYZE
+ANALYZE
+
+                                                                                                                                    QUERY PLAN                                                                                                                                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=4.07..4.08 rows=6 width=13) (actual time=0.155..0.160 rows=6 loops=1)
+   Output: f.order_id, f.order_item_id, f.net_amount
+   Sort Key: f.net_amount DESC
+   Sort Method: quicksort  Memory: 25kB
+   Buffers: shared hit=6
+   ->  Hash Join  (cost=2.61..3.99 rows=6 width=13) (actual time=0.100..0.110 rows=6 loops=1)
+         Output: f.order_id, f.order_item_id, f.net_amount
+         Inner Unique: true
+         Hash Cond: (f.channel_key = c.channel_key)
+         Buffers: shared hit=3
+         ->  Hash Join  (cost=1.57..2.85 rows=13 width=15) (actual time=0.048..0.054 rows=9 loops=1)
+               Output: f.order_id, f.order_item_id, f.net_amount, f.channel_key
+               Inner Unique: true
+               Hash Cond: (f.date_key = d.date_key)
+               Buffers: shared hit=2
+               ->  Seq Scan on dw.fact_sales f  (cost=0.00..1.21 rows=21 width=19) (actual time=0.004..0.006 rows=21 loops=1)
+                     Output: f.sale_key, f.order_item_id, f.order_id, f.customer_key, f.product_key, f.date_key, f.store_key, f.channel_key, f.quantity, f.returned_quantity, f.gross_amount, f.discount_amount, f.return_amount, f.net_amount, f.estimated_cost, f.margin_amount
+                     Buffers: shared hit=1
+               ->  Hash  (cost=1.38..1.38 rows=16 width=4) (actual time=0.017..0.018 rows=15 loops=1)
+                     Output: d.date_key
+                     Buckets: 1024  Batches: 1  Memory Usage: 9kB
+                     Buffers: shared hit=1
+                     ->  Seq Scan on dw.dim_date d  (cost=0.00..1.38 rows=16 width=4) (actual time=0.003..0.007 rows=15 loops=1)
+                           Output: d.date_key
+                           Filter: ((d.calendar_date >= '2025-03-01'::date) AND (d.calendar_date < '2025-04-01'::date))
+                           Rows Removed by Filter: 10
+                           Buffers: shared hit=1
+         ->  Hash  (cost=1.02..1.02 rows=1 width=2) (actual time=0.033..0.036 rows=1 loops=1)
+               Output: c.channel_key
+               Buckets: 1024  Batches: 1  Memory Usage: 9kB
+               Buffers: shared hit=1
+               ->  Seq Scan on dw.dim_channel c  (cost=0.00..1.02 rows=1 width=2) (actual time=0.020..0.020 rows=1 loops=1)
+                     Output: c.channel_key
+                     Filter: (c.channel_name = 'ecommerce'::text)
+                     Rows Removed by Filter: 1
+                     Buffers: shared hit=1
+ Planning:
+   Buffers: shared hit=482
+ Planning Time: 1.747 ms
+ Execution Time: 0.268 ms
+(40 rows)
+

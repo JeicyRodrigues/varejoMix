@@ -1,0 +1,360 @@
+[
+  {
+    "event_id": "evt-01-01",
+    "customer_id": 1,
+    "session_id": "sess-ana-01",
+    "occurred_at": "2025-03-25T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-01-02",
+    "customer_id": 1,
+    "session_id": "sess-ana-01",
+    "occurred_at": "2025-03-25T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "fone"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-01-03",
+    "customer_id": 1,
+    "session_id": "sess-ana-01",
+    "occurred_at": "2025-03-25T14:06:00Z",
+    "channel": "ecommerce",
+    "event_type": "add_to_cart",
+    "properties": {
+      "product_id": 1,
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-01-04",
+    "customer_id": 1,
+    "session_id": "sess-ana-01",
+    "occurred_at": "2025-03-25T14:09:00Z",
+    "channel": "ecommerce",
+    "event_type": "checkout_start",
+    "properties": {
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-01-05",
+    "customer_id": 1,
+    "session_id": "sess-ana-01",
+    "occurred_at": "2025-03-25T14:12:00Z",
+    "channel": "ecommerce",
+    "event_type": "purchase",
+    "properties": {
+      "order_id": 1018,
+      "value": 100.0
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-02-01",
+    "customer_id": 2,
+    "session_id": "sess-bruno-01",
+    "occurred_at": "2025-03-26T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-02-02",
+    "customer_id": 2,
+    "session_id": "sess-bruno-01",
+    "occurred_at": "2025-03-26T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "cafe"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-02-03",
+    "customer_id": 2,
+    "session_id": "sess-bruno-01",
+    "occurred_at": "2025-03-26T14:06:00Z",
+    "channel": "ecommerce",
+    "event_type": "add_to_cart",
+    "properties": {
+      "product_id": 2,
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-02-04",
+    "customer_id": 2,
+    "session_id": "sess-bruno-01",
+    "occurred_at": "2025-03-26T14:09:00Z",
+    "channel": "ecommerce",
+    "event_type": "purchase",
+    "properties": {
+      "order_id": 1002,
+      "value": 101.0
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-03-01",
+    "customer_id": 3,
+    "session_id": "sess-carla-01",
+    "occurred_at": "2025-03-27T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-03-02",
+    "customer_id": 3,
+    "session_id": "sess-carla-01",
+    "occurred_at": "2025-03-27T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "fone"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-03-03",
+    "customer_id": 3,
+    "session_id": "sess-carla-01",
+    "occurred_at": "2025-03-27T14:06:00Z",
+    "channel": "ecommerce",
+    "event_type": "add_to_cart",
+    "properties": {
+      "product_id": 3,
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-03-04",
+    "customer_id": 3,
+    "session_id": "sess-carla-01",
+    "occurred_at": "2025-03-27T14:09:00Z",
+    "channel": "ecommerce",
+    "event_type": "checkout_start",
+    "properties": {
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-04-01",
+    "customer_id": 4,
+    "session_id": "sess-diego-01",
+    "occurred_at": "2025-03-28T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-04-02",
+    "customer_id": 4,
+    "session_id": "sess-diego-01",
+    "occurred_at": "2025-03-28T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "cafe"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-05-01",
+    "customer_id": 5,
+    "session_id": "sess-elisa-01",
+    "occurred_at": "2025-03-29T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-05-02",
+    "customer_id": 5,
+    "session_id": "sess-elisa-01",
+    "occurred_at": "2025-03-29T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "add_to_cart",
+    "properties": {
+      "product_id": 5,
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-05-03",
+    "customer_id": 5,
+    "session_id": "sess-elisa-01",
+    "occurred_at": "2025-03-29T14:06:00Z",
+    "channel": "ecommerce",
+    "event_type": "checkout_start",
+    "properties": {
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-05-04",
+    "customer_id": 5,
+    "session_id": "sess-elisa-01",
+    "occurred_at": "2025-03-29T14:09:00Z",
+    "channel": "ecommerce",
+    "event_type": "purchase",
+    "properties": {
+      "order_id": 1014,
+      "value": 104.0
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-06-01",
+    "customer_id": 6,
+    "session_id": "sess-fabio-01",
+    "occurred_at": "2025-03-30T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-06-02",
+    "customer_id": 6,
+    "session_id": "sess-fabio-01",
+    "occurred_at": "2025-03-30T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "cafe"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-06-03",
+    "customer_id": 6,
+    "session_id": "sess-fabio-01",
+    "occurred_at": "2025-03-30T14:06:00Z",
+    "channel": "ecommerce",
+    "event_type": "add_to_cart",
+    "properties": {
+      "product_id": 6,
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-07-01",
+    "customer_id": 7,
+    "session_id": "sess-gabi-01",
+    "occurred_at": "2025-03-31T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-07-02",
+    "customer_id": 7,
+    "session_id": "sess-gabi-01",
+    "occurred_at": "2025-03-31T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "fone"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-07-03",
+    "customer_id": 7,
+    "session_id": "sess-gabi-01",
+    "occurred_at": "2025-03-31T14:06:00Z",
+    "channel": "ecommerce",
+    "event_type": "add_to_cart",
+    "properties": {
+      "product_id": 1,
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-07-04",
+    "customer_id": 7,
+    "session_id": "sess-gabi-01",
+    "occurred_at": "2025-03-31T14:09:00Z",
+    "channel": "ecommerce",
+    "event_type": "checkout_start",
+    "properties": {
+      "cart_item_count": 1
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-07-05",
+    "customer_id": 7,
+    "session_id": "sess-gabi-01",
+    "occurred_at": "2025-03-31T14:12:00Z",
+    "channel": "ecommerce",
+    "event_type": "purchase",
+    "properties": {
+      "order_id": 1009,
+      "value": 106.0
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-08-01",
+    "customer_id": null,
+    "session_id": "sess-anon-01",
+    "occurred_at": "2025-04-01T14:00:00Z",
+    "channel": "ecommerce",
+    "event_type": "page_view",
+    "properties": {
+      "page": "/produtos"
+    },
+    "source": "synthetic_fixture"
+  },
+  {
+    "event_id": "evt-08-02",
+    "customer_id": null,
+    "session_id": "sess-anon-01",
+    "occurred_at": "2025-04-01T14:03:00Z",
+    "channel": "ecommerce",
+    "event_type": "search",
+    "properties": {
+      "search_term": "cafe"
+    },
+    "source": "synthetic_fixture"
+  }
+]
